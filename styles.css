@@ -23,7 +23,6 @@ body {
   color: #222;
   overflow-x: hidden;
 
-  /* 爽やかドット背景 */
   background-color: #f7fbff;
   background-image: radial-gradient(#d6ecff 1.2px, transparent 1.2px);
   background-size: 24px 24px;
@@ -43,7 +42,6 @@ header {
 header h1 {
   font-size: 1.7rem;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
 /* =====================================
@@ -57,19 +55,16 @@ header h1 {
 }
 
 /* =====================================
-   タブメニュー（10個対応）
+   タブメニュー
 ===================================== */
 .tab-nav {
   display: flex;
   gap: 0.5rem;
   margin: 1.5rem 0 1.2rem;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   padding-bottom: 0.5rem;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scroll-snap-type: x mandatory;
 }
 
 .tab-nav::-webkit-scrollbar {
@@ -92,14 +87,11 @@ header h1 {
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-size: 0.95rem;
-  line-height: 1.4;
   cursor: pointer;
   transition: 0.25s;
   color: #0077cc;
   font-weight: 600;
   text-align: center;
-  scroll-snap-align: center;
-  white-space: nowrap;
 }
 
 .tab-btn:hover {
@@ -117,13 +109,11 @@ header h1 {
 ===================================== */
 .tab-panel {
   display: none;
-  width: 100%;
   background: rgba(255,255,255,0.95);
   border-radius: 14px;
   padding: 2rem;
   box-shadow: 0 10px 28px rgba(0,0,0,0.06);
   margin-bottom: 2rem;
-  overflow-x: hidden;
 }
 
 .tab-panel.active {
@@ -142,41 +132,8 @@ h2 {
 }
 
 /* =====================================
-   料金表
+   カード
 ===================================== */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.price-table th,
-.price-table td {
-  border: 1px solid #e5f0fa;
-  padding: 0.6rem;
-  text-align: left;
-}
-
-.price-table th {
-  background: #eaf6ff;
-  font-weight: 600;
-}
-
-/* =====================================
-   トップ：開校情報カード
-===================================== */
-.top-lead .lead {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-
-.top-lead .sub {
-  margin-bottom: 1.2rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
 .schedule-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -184,17 +141,10 @@ h2 {
 }
 
 .day-card {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5f0fa;
   border-radius: 14px;
   padding: 1.1rem;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
-  transition: 0.25s ease;
-}
-
-.day-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .day-title {
@@ -208,51 +158,34 @@ h2 {
 .place-list {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
 }
 
 .chip {
-  display: inline-block;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   background: #eaf6ff;
   border: 1px solid #d6ecff;
-  color: #005fa3;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.note {
-  margin-top: 1.2rem;
-  color: #555;
   font-size: 0.9rem;
 }
 
 /* =====================================
-   画像表示
+   画像
 ===================================== */
 .image-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .parts-image {
   width: 100%;
   max-width: 700px;
   height: auto;
-  display: block;
-  margin: 0 auto;
   border-radius: 12px;
-}
-
-.tab-panel img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* =====================================
@@ -262,93 +195,40 @@ footer {
   text-align: center;
   font-size: 0.85rem;
   color: #666;
-  padding-top: 1rem;
 }
 
 /* =====================================
-   レスポンシブ
+   スマホ最適化（完成形）
 ===================================== */
 @media (max-width: 700px) {
-  body {
-    background-size: 18px 18px;
-  }
-
-  header {
-    padding: 1.2rem 0.8rem;
-  }
-
-  header h1 {
-    font-size: 1.35rem;
-    letter-spacing: 0.5px;
-  }
-
-  .wrapper {
-    padding: 1rem 0.75rem 1.5rem;
-  }
 
   .tab-nav {
-    gap: 0.35rem;
-    margin: 1rem 0 1rem;
-    padding-bottom: 0.4rem;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+    gap: 0.4rem;
   }
 
   .tab-btn {
-    min-width: auto;
-    font-size: 0.72rem;
-    padding: 0.45rem 0.7rem;
-    white-space: nowrap;
+    flex: 0 1 auto;
+    min-width: 44%;
+    max-width: 48%;
+    font-size: 0.8rem;
+    padding: 0.7rem 0.5rem;
+    white-space: normal;
+    line-height: 1.3;
+    border-radius: 10px;
   }
 
   .tab-panel {
-    padding: 1.1rem;
-    border-radius: 12px;
+    padding: 1.2rem;
   }
 
   h2 {
-    font-size: 1.15rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .top-lead .lead {
-    font-size: 1rem;
-  }
-
-  .top-lead .sub,
-  .note,
-  .chip,
-  .price-table,
-  .price-table th,
-  .price-table td {
-    font-size: 0.88rem;
-  }
-
-  .day-card {
-    padding: 0.9rem;
-  }
-
-  .day-title {
-    font-size: 1rem;
-    margin-bottom: 0.7rem;
-  }
-
-  .place-list {
-    gap: 0.45rem;
-  }
-
-  .chip {
-    padding: 0.3rem 0.6rem;
-  }
-
-  .image-box {
-    gap: 16px;
+    font-size: 1.1rem;
   }
 
   .parts-image {
     max-width: 100%;
-    border-radius: 10px;
-  }
-
-  footer {
-    font-size: 0.8rem;
   }
 }
