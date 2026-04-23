@@ -1,0 +1,284 @@
+/* =====================================
+   崩れ防止リセット（最重要）
+===================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3,
+p,
+ul {
+  margin: 0;
+}
+
+/* =====================================
+   全体設定
+===================================== */
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.7;
+  color: #222;
+
+  /* 爽やかドット背景 */
+  background-color: #f7fbff;
+  background-image: radial-gradient(#d6ecff 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* =====================================
+   ヘッダー
+===================================== */
+header {
+  background: linear-gradient(135deg, #4facfe, #00c6ff);
+  color: #fff;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+header h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* =====================================
+   コンテンツ幅
+===================================== */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+
+  /* 本文はみ出し防止（タブは横スクロールOK） */
+  overflow-x: hidden;
+}
+
+/* =====================================
+   タブメニュー（10個対応）
+===================================== */
+.tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1.2rem;
+
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 0.5rem;
+
+  scrollbar-width: thin;
+}
+
+.tab-nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tab-nav::-webkit-scrollbar-thumb {
+  background: #bfe4ff;
+  border-radius: 3px;
+}
+
+/* =====================================
+   タブボタン
+===================================== */
+.tab-btn {
+  flex: 0 0 auto;
+  min-width: 100px;
+
+  border: 2px solid #4facfe;
+  background: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.25s;
+  color: #0077cc;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  background: #eaf6ff;
+}
+
+.tab-btn.active {
+  background: #4facfe;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* =====================================
+   タブ中身
+===================================== */
+.tab-panel {
+  display: none;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* =====================================
+   見出し
+===================================== */
+h2 {
+  font-size: 1.4rem;
+  border-bottom: 3px solid #4facfe;
+  padding-bottom: 0.4rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+/* =====================================
+   料金表
+===================================== */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #e5f0fa;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.price-table th {
+  background: #eaf6ff;
+  font-weight: 600;
+}
+
+/* =====================================
+   トップ：開校情報カード
+===================================== */
+.top-lead .lead {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.top-lead .sub {
+  margin-bottom: 1.2rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.day-card {
+  background: #ffffff;
+  border: 1px solid #e5f0fa;
+  border-radius: 14px;
+  padding: 1.1rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.day-title {
+  font-size: 1.05rem;
+  color: #0077cc;
+  border-left: 4px solid #4facfe;
+  padding-left: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+/* カード内リストは余白ゼロ */
+.place-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #eaf6ff;
+  border: 1px solid #d6ecff;
+  color: #005fa3;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.note {
+  margin-top: 1.2rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* =====================================
+   画像表示
+===================================== */
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.parts-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+/* =====================================
+   フッター
+===================================== */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding-top: 1rem;
+}
+
+/* =====================================
+   レスポンシブ
+===================================== */
+@media (max-width: 700px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .tab-panel {
+    padding: 1.4rem;
+  }
+
+  .image-box {
+    gap: 16px;
+  }
+
+  .parts-image {
+    max-width: 100%;
+  }
+}

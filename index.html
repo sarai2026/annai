@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>【教室案内】</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    body.preload .tab-panel {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="preload">
+
+  <header>
+    <h1>【教室案内】</h1>
+  </header>
+
+  <div class="wrapper">
+
+    <!-- タブボタン（10個） -->
+    <nav class="tab-nav" aria-label="メインコンテンツ切り替え">
+      <button class="tab-btn" data-target="tab-top">トップ</button>
+      <button class="tab-btn" data-target="tab-about">振替</button>
+      <button class="tab-btn" data-target="tab-course">パーツの整頓方法</button> 
+      <button class="tab-btn" data-target="tab-fude">筆箱の中身</button>
+      <button class="tab-btn" data-target="tab-price">タブレット修理依頼</button>
+      <button class="tab-btn" data-target="tab-blog">ブログ</button>
+      <button class="tab-btn" data-target="tab-tanki">短期講座</button>
+      <button class="tab-btn" data-target="tab-honkaku">本格プログラミングコース</button>
+     
+      
+    </nav>
+
+    <!-- トップ -->
+    <section id="tab-top" class="tab-panel">
+      <h2>現在の教室開校情報</h2>
+
+      <div class="top-lead">
+        <p class="lead">現在、<strong>8教室</strong>を運営しています。在籍生徒数過去最高記録更新中！！</p>
+        <p class="sub"></p>
+      </div>
+
+      <div class="schedule-grid">
+
+  <article class="day-card">
+    <h3 class="day-title">月曜日</h3>
+    <ul class="place-list">
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=3628&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          桜井幼稚園教室
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <article class="day-card">
+    <h3 class="day-title">水曜日</h3>
+    <ul class="place-list">
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=1259&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          西尾寺津教室
+        </a>
+      </li>
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=3963&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          第二慈恵幼稚園教室
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <article class="day-card">
+    <h3 class="day-title">金曜日</h3>
+    <ul class="place-list">
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=1259&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          西尾寺津教室
+        </a>
+      </li>
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=2593"
+           target="_blank" rel="noopener noreferrer">
+          安城桜井教室
+        </a>
+      </li>
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=3946&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          慈恵幼稚園教室
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <article class="day-card">
+    <h3 class="day-title">土曜日</h3>
+    <ul class="place-list">
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=1259&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          西尾寺津教室
+        </a>
+      </li>
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=2207&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          西尾お城下教室
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <article class="day-card">
+    <h3 class="day-title">日曜日</h3>
+    <ul class="place-list">
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=2593"
+           target="_blank" rel="noopener noreferrer">
+          安城桜井教室
+        </a>
+      </li>
+      <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=2358&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          碧南中央教室
+        </a>
+      </li>
+ <li>
+        <a class="chip"
+           href="https://kids.athuman.com/search/detail/?store_id=3629&code=140000"
+           target="_blank" rel="noopener noreferrer">
+          吉良交流教室
+        </a>
+      </li>
+    </ul>
+  </article>
+
+</div>
+
+      <p class="note">※詳しい時間帯や空き状況はクリックしてご確認ください。</p>
+    </section>
+
+    <!-- 塾について -->
+    <section id="tab-about" class="tab-panel">
+      <h2>振替につきまして</h2>
+      <p>振替規定はありませんが、講師確保の都合上、お休みをされる場合は”早めのご連絡”をお願い致します。<br>
+      当日連絡による、授業日”当日”の時間変更は行っておりません。<br>
+また、振替の連絡はLINEメッセージのみ受け付けております。※直接のご相談、電話でのご相談は受け付けておりません。</p>
+    </section>
+
+    <!-- パーツの整頓方法 -->
+    <section id="tab-course" class="tab-panel">
+  <h2>パーツの整頓方法</h2>
+
+  <div class="image-box">
+    <img src="parts.png" alt="画像" class="parts-image">
+    <img src="image0.JPEG" alt="画像" class="parts-image">
+  </div>
+</section>
+
+ <!-- 筆箱の中身 -->
+    <section id="tab-fude" class="tab-panel">
+      <h2>筆箱の中身</h2>
+      <p>・鉛筆<br>
+         ・消しゴム<br>
+         ・赤ペン<br>
+         ・鉛筆削り<br>
+※特に”鉛筆”を２ヶ月連続で忘れた方は個別にご連絡させて頂きます。</p>
+    </section>
+    <!-- タブレット修理依頼 -->
+    <section id="tab-price" class="tab-panel">
+      <h2>タブレット修理依頼</h2>
+      <p></p>
+      保護者様による発送手続きが必要となります。※着払いで発送して下さい。<br>
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeACtcZFJJYx5x103N6dVoDMmGL0a6J4L9wIH2GVFiXnAWEkQ/viewform" target="_blank">
+  <button>申し込みはこちら</button>
+</a>
+    </section>
+
+    <!-- アクセス -->
+    <section id="tab-access" class="tab-panel">
+      <h2>ブログ</h2>
+      <p></p>
+      <p></p>
+      <p></p>
+    </section>
+
+    <!-- お知らせ -->
+    <section id="tab-news" class="tab-panel">
+      <h2>お知らせ</h2>
+      <p>最新情報をここに掲載します。</p>
+    </section>
+
+    <!-- ブログ -->
+    <section id="tab-blog" class="tab-panel">
+      <h2>ブログ</h2>
+      <p>教室の様子、学習アドバイス、イベント報告などを書きます。</p>
+    </section>
+    
+    <!-- 短期講座 -->
+    <section id="tab-tanki" class="tab-panel">
+      <h2>短期講座</h2>
+      <p>現在制作中です。</p>
+    </section>
+   
+    <!-- 本格プログラミングコース -->
+    <section id="tab-honkaku" class="tab-panel">
+      <h2>本格プログラミング</h2>
+      <p>現在制作中です。</p>
+    </section>
+
+   
+
+
+    
+
+    <footer>
+      &copy; 【教室案内】
+    </footer>
+
+  </div>
+
+  <!-- タブ切り替え用スクリプト -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    function showTab(targetId) {
+      tabButtons.forEach(btn => {
+        if (btn.dataset.target === targetId) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      tabPanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.classList.add("active");
+        } else {
+          panel.classList.remove("active");
+        }
+      });
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.target;
+        showTab(targetId);
+        localStorage.setItem("activeTab", targetId);
+      });
+    });
+
+    const savedTab = localStorage.getItem("activeTab");
+    const firstTab = savedTab && document.getElementById(savedTab) ? savedTab : "tab-top";
+
+    showTab(firstTab);
+    document.body.classList.remove("preload");
+  </script>
+
+</body>
+</html>
